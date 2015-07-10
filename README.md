@@ -1,6 +1,12 @@
 BEM-Flux
 ========
 
+Flux implementation on top of [bem-core](https://github.com/bem/bem-core/).
+
+> And what's about React?
+
+BEM stack provides a full-featured view layer and could be a great replacement for React.
+
 Example
 -------
 
