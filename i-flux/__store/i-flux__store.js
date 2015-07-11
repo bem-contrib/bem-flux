@@ -1,16 +1,17 @@
 modules.define('i-flux__store', ['i-bem'], function (provide, BEM) {
-    var Store = BEM.decl('i-flux__store', {
+    BEM.decl('i-flux__store', {
         onSetMod: {
             js: function () {
-                var handlers = this.params.handlers.reduce(function (acc, pair) {
+                var params = this.params,
+                    handlers = params.handlers.reduce(function (acc, pair) {
                     acc[pair[0]] = pair[1];
 
                     return acc;
                 }, {});
 
-                this.state = this.params.state || {};
+                this.state = params.state || {};
 
-                this.params.dispatcher.register(function (action) {
+                params.dispatcher.register(function (action) {
                     if (handlers[action.type]) {
                         handlers[action.type].call(this, action.data);
                     }
