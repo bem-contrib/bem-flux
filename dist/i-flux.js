@@ -352,7 +352,7 @@ modules.define('i-flux__controller', ['i-bem__dom'], function (provide, BEMDOM) 
                 var chunks = name.split('.');
                 var block = chunks.pop();
                 var elem = chunks.pop();
-                var $elem = elem ? this.elem(elem) : this.domElem;
+                var $elem = elem ? this.elem.apply(this, elem.split('_')) : this.domElem;
                 var events = views[name];
 
                 if (!$elem.length) {
