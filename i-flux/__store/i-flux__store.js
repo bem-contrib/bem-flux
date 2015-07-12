@@ -4,10 +4,10 @@ modules.define('i-flux__store', ['i-bem'], function (provide, BEM) {
             js: function () {
                 var params = this.params,
                     handlers = params.handlers.reduce(function (acc, pair) {
-                    acc[pair[0]] = pair[1];
+                        acc[pair[0]] = pair[1];
 
-                    return acc;
-                }, {});
+                        return acc;
+                    }, {});
 
                 this.state = params.state || {};
 
