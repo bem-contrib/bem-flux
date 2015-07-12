@@ -1,0 +1,23 @@
+{
+  "name": "bem-flux",
+  "version": "0.0.1",
+  "description": "Flux implementation on top of bem-core.",
+  "main": "dist/i-flux.js",
+  "scripts": {
+    "build": "mkdir -p dist && find './i-flux' -type f \\( -name '*.js' -and -not -name '*.deps.js' \\) -exec cat {} \\; > 'dist/i-flux.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bem-incubator/bem-flux.git"
+  },
+  "author": "Roman Paradeev <sameoldmadness@gmail.com> (http://github.com/sameoldmadness)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bem-incubator/bem-flux/issues"
+  },
+  "homepage": "https://github.com/bem-incubator/bem-flux#readme",
+  "keywords": [
+    "bem",
+    "flux"
+  ]
+}
