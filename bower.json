@@ -1,0 +1,24 @@
+{
+  "name": "bem-flux",
+  "version": "0.0.1",
+  "description": "Flux implementation on top of bem-core.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bem-incubator/bem-flux.git"
+  },
+  "keywords": [
+    "bem",
+    "flux"
+  ],
+  "authors": [
+    "Roman Paradeev <sameoldmadness@gmail.com>"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bem-core": "^2"
+  },
+  "license": "MIT"
+}
