@@ -9,13 +9,15 @@ modules.define('i-flux__store', ['i-bem'], function (provide, BEM) {
                         return acc;
                     }, {});
 
-                this.state = params.state || {};
-
                 params.dispatcher.register(function (action) {
                     if (handlers[action.type]) {
                         handlers[action.type].call(this, action.data);
                     }
                 }.bind(this));
+
+                this.state = params.state || {};
+                
+                this.emitChange();
             }
         },
 
