@@ -9,9 +9,13 @@ modules.define('i-flux__actions', function (provide) {
                 var key = randId + '_' + action;
 
                 acc[action] = function () {
-                    var argNames = Array(actions[action]);
+                    var argNames = actions[action];
                     var data = {};
                     var i;
+                    
+                    if (!Array.isArray(argNames)) {
+                        argNames = [argNames];
+                    }
 
                     for (i = 0; i < argNames.length; i += 1) {
                         data[argNames[i]] = arguments[i];
