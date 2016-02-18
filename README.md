@@ -22,7 +22,7 @@ modules.require(['i-flux'], function (provide, FLUX) {
         }
     });
 
-    var ordersStore = STORE.create({
+    var ordersStore = FLUX.STORE.create({
         dispatcher: dispatcher,
 
         state: {
@@ -40,7 +40,7 @@ modules.require(['i-flux'], function (provide, FLUX) {
         ]
     });
 
-    var controller = CONTROLLER.decl('phone__controller', {
+    var controller = FLUX.CONTROLLER.decl('phone__controller', {
         stores: [
             [ordersStore, function (store) {
                 this.findBlockInside('cart').setVal(store.get('price'));
